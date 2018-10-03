@@ -104,7 +104,7 @@ else
 
     Write-Output "";
     Write-Output "VS Code has been successfully set up!";
-    $setupExts = Read-Host "Do you want to also the Java VS Code extension (y/n)";
+    $setupExts = Read-Host "Do you want to also install the Java VS Code extension (y/n)";
     if ($setupExts.ToLower().Contains("y"))
     {
         code --install-extension "scjava.vscode-java-pack";
