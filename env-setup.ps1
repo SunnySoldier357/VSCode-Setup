@@ -107,7 +107,7 @@ else
     $setupExts = Read-Host "Do you want to also install the Java VS Code extension (y/n)";
     if ($setupExts.ToLower().Contains("y"))
     {
-        code --install-extension "scjava.vscode-java-pack";
+        code --install-extension "vscjava.vscode-java-pack";
     }
 }
 
