@@ -13,7 +13,7 @@ $systemPath = [System.Environment]::GetEnvironmentVariable("PATH",
 $userPath = [System.Environment]::GetEnvironmentVariable("PATH",
     [System.EnvironmentVariableTarget]::User);
 
-if (($userPath -And !$userPath.ToLower().Contains("code")) -or ($systemPath -And !$systemPath.ToLower().Contains("code")))
+if (!($userPath.Contains("Microsoft VS Code") -or $systemPath.Contains("Microsoft VS Code")))
 {
     Write-Warning "Please Install VS Code first!";
 }
@@ -32,7 +32,7 @@ else
     # Setting Environment Variables for Maven
     [System.Environment]::SetEnvironmentVariable("M2_Home", $mavenHomePath,
         [System.EnvironmentVariableTarget]::User);
-    [System.Environment]::SetEnvironmentVariable("M2", "%M2_HOME%\bin",
+    [System.Environment]::SetEnvironmentVariable("M2", $mavenHomePath + "\bin",
         [System.EnvironmentVariableTarget]::User);
     [System.Environment]::SetEnvironmentVariable("MAVEN_OPTS", "-Xmx256m -Xmx512m",
         [System.EnvironmentVariableTarget]::User);
@@ -111,4 +111,4 @@ else
     }
 }
 
-Read-Host "Press enter to exit";
+Read-Host "Press enter to exit...";
