@@ -23,9 +23,6 @@ install them before running the script.
 1. Press **Ctrl + Shift + P** to open up Command Palette.
 2. Type *maven* and select the *Generate from Maven*
    *Archetype* option.
-
-![Step 2 to generate new project](https://github.com/SunnySoldier357/VSCode-Setup/blob/master/Images/step2.PNG)
-
 3. A drop down list will pop-up at the top of the screen.
    Always select the *maven-archetype-quickstart* options
    (the 1st one).
