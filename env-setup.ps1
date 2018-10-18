@@ -32,7 +32,10 @@ else
     # Setting Environment Variables for Maven
     [System.Environment]::SetEnvironmentVariable("M2_Home", $mavenHomePath,
         [System.EnvironmentVariableTarget]::User);
-    [System.Environment]::SetEnvironmentVariable("M2", $mavenHomePath + "\bin",
+    
+    $mavenBinPath = $mavenHomePath.ToString() + "\bin";
+        
+    [System.Environment]::SetEnvironmentVariable("M2", $mavenBinPath,
         [System.EnvironmentVariableTarget]::User);
     [System.Environment]::SetEnvironmentVariable("MAVEN_OPTS", "-Xmx256m -Xmx512m",
         [System.EnvironmentVariableTarget]::User);
