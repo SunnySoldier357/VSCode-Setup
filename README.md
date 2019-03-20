@@ -1,4 +1,4 @@
-# Sandeep's VS Code Maven Setup
+# Sandeep's VS Code Maven Setup [\[Depreciated\]](https://github.com/SunnySoldier357/VSCode-Setup#Depreciated)
 
 ## Introduction
 
@@ -103,3 +103,10 @@ install them before running the script.
 ## More Information
 
 The official [VS Code Documentation](https://code.visualstudio.com/docs).
+
+## Depreciated
+
+Maven can now be installed using [Chocolatey](https://chocolatey.org/)
+which makes it much more stable and easier to update to the
+latest Maven version as well. The steps to making a Maven
+project, however, are still the same.
